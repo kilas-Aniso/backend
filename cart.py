@@ -1,6 +1,8 @@
 class ShoppingCart:
-    def __init__(self):
+    def __init__(self,quantity,price):
         self.products = []
+        self.quantity = quantity
+        self.price = price
     def add_item(self, product):
         # method to add a product to the shopping cart
         self.products.append(product)
