@@ -9,9 +9,12 @@ class ShoppingCart:
     def remove_item(self, product):
         # method to remove a product from the shopping cart
         self.products.remove(product)
-    def checkout(self, address, payment_method):
+    def checkout(self, address, payment_method,price, quantity,product,category):
         self.adress =address
         self.payment_method = payment_method
-        # method to complete the checkout process
-        # verify user's address and payment information
-        # pass
+        self.price=price
+        self.quantity=quantity
+        self.product=product
+        self.category = category
+        total = category.product.price * quantity
+        return total
